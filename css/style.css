@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
+
+:root{
+  --blue:#12b8f3;
+  --gray:#c3c1c1;
+  --text:#0b0b0b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+html{background:#fff}
+body{
+  min-width:1440px;
+  color:var(--text);
+  background:#fff;
+  font-family:'M PLUS Rounded 1c','Rounded Mplus 1c','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;
+  font-weight:400;
+  line-height:1.8;
+}
+a{color:inherit;text-decoration:none}
+img{display:block}
+
+/* ---------- common header / footer ---------- */
+.site-header{height:64px;background:#fff}
+.site-header__inner{
+  width:1300px;height:64px;margin:0 auto;
+  display:flex;align-items:center;
+}
+.site-logo{width:160px;height:48px;flex:0 0 160px;display:flex;align-items:center}
+.site-logo img{width:160px;height:auto}
+.site-nav{
+  margin-left:137px;
+  display:flex;align-items:center;gap:34px;
+  white-space:nowrap;
+  font-size:15px;line-height:1;font-weight:700;
+}
+.reserve-link{
+  width:120px;height:50px;margin-left:40px;
+  border-radius:13px;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  white-space:nowrap;font-size:15px;line-height:1;font-weight:700;
+}
+.site-footer{
+  height:50px;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;line-height:1;
+}
+.page-title{margin:0;color:var(--blue);font-size:34px;line-height:1.2;font-weight:700}
+.blue-button{
+  min-width:116px;height:30px;padding:0 22px;border-radius:999px;
+  background:var(--blue);color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:13px;line-height:1;font-weight:700;
+}
+
+/* ---------- shared timetable ---------- */
+.hours{width:956px;margin:0 auto}
+.hours-table{width:956px;border-collapse:collapse;table-layout:fixed;font-weight:700}
+.hours-table th,.hours-table td{border:1.5px solid #111;text-align:center;vertical-align:middle;padding:0}
+.hours-table thead th{height:102px;background:var(--gray);font-size:18px}
+.hours-table thead th:first-child{width:42%;color:var(--blue);font-size:27px}
+.hours-table tbody th{height:102px;font-size:17px}
+.hours-table tbody td{height:102px;font-size:19px}
+.hours-note{margin:20px 0 0;font-size:14px;line-height:1.62;font-weight:700}
+
+/* =========================================================
+   HOME / Desktop-1.png (1440px frame)
+   ========================================================= */
+.home-hero{height:824px;position:relative;overflow:hidden}
+.home-hero img{width:100%;height:100%;object-fit:cover;object-position:center center}
+.home-hero h1{
+  position:absolute;left:83px;top:138px;margin:0;
+  color:#fff;font-size:50px;line-height:1.15;font-weight:700;
+  -webkit-text-stroke:1px #222;
+  text-shadow:0 1px 2px rgba(0,0,0,.18);
+}
+.home-hours-block{height:658px;padding-top:128px}
+.facility-strip{height:272px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;overflow:hidden}
+.facility-strip img{width:100%;height:272px;object-fit:cover;object-position:center center}
+
+.home-news{height:732px;position:relative}
+.home-news__inner{
+  width:1070px;height:100%;margin:0 auto;
+  display:grid;grid-template-columns:373px 1fr;column-gap:68px;align-items:start;
+  padding-top:129px;
+}
+.home-news__inner>img{width:373px;height:473px;object-fit:cover}
+.home-news-copy{padding-top:8px;position:relative;height:473px}
+.home-news h2{margin:0 0 28px;color:var(--blue);font-size:30px;line-height:1.2;font-weight:700}
+.home-news-list{list-style:none;margin:0;padding:0;width:630px}
+.home-news-list li{height:64px;border-bottom:1px solid #111;display:flex;align-items:center;font-size:15px;font-weight:700}
+.home-news__button{position:absolute;right:0;bottom:0;margin:0}
+
+.home-director{height:796px;background:var(--gray)}
+.home-director__inner{
+  width:1240px;height:100%;margin:0 auto;
+  display:grid;grid-template-columns:445px 1fr;column-gap:82px;align-items:start;
+  padding-top:101px;
+}
+.home-director img{width:445px;height:474px;object-fit:cover}
+.home-director-copy{padding-top:12px}
+.home-director h2{margin:0 0 42px;color:var(--blue);font-size:30px;line-height:1.2;font-weight:700}
+.home-director p{margin:0 0 24px;font-size:14px;line-height:1.72}
+.home-director .director-sign{text-align:right;font-weight:700;margin-top:24px}
+
+.home-medical{height:2154px;padding-top:96px;position:relative}
+.home-medical__inner{width:1140px;margin:0 auto}
+.home-medical .section-title{margin:0 0 83px;text-align:center;color:var(--blue);font-size:30px;line-height:1.2}
+.home-medical-row{
+  width:1078px;height:400px;margin:0 auto 50px;
+  display:grid;grid-template-columns:400px 538px;column-gap:140px;align-items:center;
+}
+.home-medical-row:nth-of-type(even){grid-template-columns:538px 400px}
+.home-medical-row:nth-of-type(even) img{grid-column:2}
+.home-medical-row:nth-of-type(even) .home-medical-copy{grid-column:1;grid-row:1;justify-self:end}
+.home-medical-row img{width:400px;height:400px;object-fit:cover}
+.home-medical-copy{width:486px;justify-self:start}
+.home-medical-copy h3{margin:0 0 18px;text-align:center;font-size:18px;line-height:1.4;font-weight:700}
+.home-medical-copy p{margin:0;font-size:14px;line-height:2}
+.home-medical__button{position:absolute;right:182px;bottom:105px;margin:0}
+
+.home-about{height:550px;background:var(--gray)}
+.home-about__inner{
+  width:1140px;height:100%;margin:0 auto;
+  display:grid;grid-template-columns:400px 660px;column-gap:80px;align-items:start;
+  padding-top:101px;
+}
+.home-about img{width:400px;height:400px;object-fit:cover}
+.home-about-copy{padding-top:10px;position:relative;height:400px}
+.home-about h2{margin:0 0 56px;color:var(--blue);font-size:30px;line-height:1.2;font-weight:700}
+.home-about p{margin:0;font-size:14px;line-height:2.15}
+.home-about__button{position:absolute;right:0;bottom:20px;margin:0}
+
+.home-staff{height:2125px;padding-top:97px}
+.home-staff__inner{width:1140px;margin:0 auto}
+.home-staff .section-title{margin:0;text-align:center;color:var(--blue);font-size:30px;line-height:1.2}
+.staff-lead{width:720px;margin:42px auto 71px;text-align:center;font-size:14px;line-height:2}
+.staff-row{
+  width:1078px;height:400px;margin:0 auto 50px;
+  display:grid;grid-template-columns:400px 538px;column-gap:140px;align-items:center;
+}
+.staff-row:nth-of-type(even){grid-template-columns:538px 400px}
+.staff-row:nth-of-type(even) img{grid-column:2}
+.staff-row:nth-of-type(even) .staff-copy{grid-column:1;grid-row:1;justify-self:end}
+.staff-row img{width:400px;height:400px;object-fit:cover}
+.staff-copy{width:486px;justify-self:start}
+.staff-copy h3{margin:0 0 18px;text-align:center;font-size:18px;line-height:1.4;font-weight:700}
+.staff-copy ul{margin:0;padding-left:1.3em;font-size:14px;line-height:1.8}
+.staff-copy li{margin:4px 0}
+
+.home-access{height:1836px;padding-top:89px}
+.home-access__inner{width:1140px;margin:0 auto}
+.home-access .section-title{margin:0 0 68px;text-align:center;color:var(--blue);font-size:30px;line-height:1.2}
+.home-access-top{display:grid;grid-template-columns:462px 1fr;column-gap:72px;align-items:start}
+.home-access-top img{width:462px;height:390px;object-fit:cover}
+.home-access-copy{padding-top:20px;font-size:14px;line-height:1.75;position:relative;height:390px}
+.home-access-copy h3{margin:0 0 8px;font-size:16px;line-height:1.5}
+.home-access-copy ul{margin:0 0 10px;padding-left:1.3em}
+.home-access-copy p{margin:0 0 24px}
+.home-access-button{position:absolute;right:0;bottom:0;margin:0}
+.home-access .hours{margin-top:92px}
+.home-departments{text-align:center;margin-top:83px}
+.home-departments h2{margin:0 0 44px;color:var(--blue);font-size:30px;line-height:1.2}
+.home-departments p{margin:27px 0;font-size:15px;line-height:1.4;font-weight:700}
+.home-departments .help{margin-top:46px;font-size:14px;font-weight:400}
+
+/* =========================================================
+   MEDICAL / Desktop-4.png
+   ========================================================= */
+.medical-main{height:3394px;padding-top:63px}
+.medical-main>.page-title{text-align:center;height:41px}
+.medical-list{width:1080px;margin:60px auto 0}
+.medical-row{
+  width:1080px;height:400px;margin:0 0 50px;
+  display:grid;grid-template-columns:400px 540px;column-gap:140px;align-items:center;
+}
+.medical-row:nth-child(even){grid-template-columns:540px 400px}
+.medical-row:nth-child(even) img{grid-column:2}
+.medical-row:nth-child(even) .medical-copy{grid-column:1;grid-row:1}
+.medical-row img{width:400px;height:400px;object-fit:cover}
+.medical-copy{width:500px}
+.medical-row:nth-child(even) .medical-copy{justify-self:start}
+.medical-copy h2{margin:0 0 18px;text-align:center;font-size:18px;line-height:1.45;font-weight:700}
+.medical-copy p{margin:0;font-size:14px;line-height:2.05}
+
+/* =========================================================
+   ABOUT / Desktop-5.png
+   ========================================================= */
+.about-main{height:3840px;padding-top:130px}
+.about-list{width:1140px;margin:0 auto}
+.about-row{
+  height:400px;margin:0 0 130px;
+  display:grid;grid-template-columns:400px 660px;column-gap:80px;align-items:start;
+}
+.about-row:last-child{margin-bottom:0}
+.about-row img{width:400px;height:400px;object-fit:cover}
+.about-copy{padding-top:12px}
+.about-copy h2{margin:0 0 45px;color:var(--blue);font-size:30px;line-height:1.2;font-weight:700}
+.about-copy p,.about-copy li{font-size:14px;line-height:2;margin-top:0}
+.about-copy p{margin-bottom:0}
+.about-copy ul{margin:8px 0 0;padding-left:1.45em}
+.about-values p+p{margin-top:0}
+
+/* =========================================================
+   FAQ / Desktop-7.png
+   ========================================================= */
+.faq-main{height:1656px;width:1168px;margin:0 auto;padding-top:63px}
+.faq-main>.page-title{height:41px;margin-bottom:39px}
+.faq-section{width:910px;margin:0}
+.faq-section h2{
+  width:630px;margin:0 0 18px;padding:0 0 4px;
+  border-bottom:1px solid #111;
+  font-size:17px;line-height:1.35;font-weight:700;
+}
+.faq-section:nth-of-type(1){height:425px}
+.faq-section:nth-of-type(2){height:395px}
+.faq-section:nth-of-type(3){height:271px}
+.faq-section:nth-of-type(4){height:auto}
+.faq-item{margin:0 0 28px}
+.faq-item h3{margin:0 0 12px;font-size:17px;line-height:1.5;font-weight:700}
+.faq-item p{margin:0;font-size:16px;line-height:1.9}
+.faq-closing{margin:28px 0 0;font-size:16px;line-height:1.9}
+
+/* =========================================================
+   Existing remaining pages (Desktop-2/3/6)
+   ========================================================= */
+.news-main{height:910px;padding-top:58px}
+.news-wrap{width:1160px;margin:0 auto}
+.news-list{width:930px;margin-top:40px}
+.news-item{margin-bottom:31px}
+.news-item h2{width:650px;margin:0;border-bottom:1px solid #111;padding-bottom:3px;font-size:16px;line-height:1.4}
+.news-item p{margin:8px 0 0;font-size:14px;line-height:1.75}
+
+.reserve-main{height:910px;padding-top:58px}
+.reserve-wrap{width:1160px;margin:0 auto}
+.reserve-question{width:650px;margin-top:38px}
+.reserve-question h2{margin:0;border-bottom:1px solid #111;padding-bottom:3px;font-size:16px}
+.reserve-choice{display:flex;gap:80px;padding:29px 0 0 92px;font-size:16px}
+.reserve-choice label{display:flex;align-items:center;gap:17px;white-space:nowrap}
+.reserve-choice input{appearance:none;width:12px;height:12px;border:1px solid #777;background:#fff}
+.calendar{width:650px;margin:32px 0 0 270px}
+.calendar-head{height:116px;background:var(--gray);position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.calendar-month{font-size:50px;font-weight:700;line-height:1}
+.calendar-year{font-size:16px;font-weight:700;margin-top:9px}
+.calendar-next{position:absolute;right:20px;top:11px;font-size:69px;font-family:Arial,sans-serif;font-weight:300;line-height:1}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);grid-auto-rows:73px;align-items:center;text-align:center;font-size:20px;font-weight:700;padding-top:12px}
+.calendar-grid .dow{font-size:20px}.calendar-grid .sun{color:#f00}.calendar-grid .sat{color:#0000ff}
+
+.access-main{min-height:1758px;padding-top:70px}
+.access-wrap{width:1120px;margin:0 auto}
+.access-wrap>.page-title{text-align:center;margin-bottom:55px}
+.access-top{display:grid;grid-template-columns:500px 1fr;gap:85px;align-items:start}
+.access-map{width:500px;height:420px;object-fit:cover}
+.access-info{padding-top:18px;font-size:16px;line-height:1.9}
+.access-info h2{font-size:17px;margin:0 0 9px}.access-info ul{margin:0 0 8px;padding-left:1.4em}.access-info p{margin:0}.access-info .contact{margin-top:32px}
+.access-hours{width:1080px;margin:105px auto 0}
+.access-hours .hours-table{width:1080px}.access-hours .hours-table thead th{height:100px;font-size:23px}.access-hours .hours-table thead th:first-child{font-size:33px}.access-hours .hours-table tbody th,.access-hours .hours-table tbody td{height:100px;font-size:22px}.access-hours .hours-note{font-size:16px;margin-top:17px}
+.access-departments{text-align:center;padding:105px 0 125px;font-weight:700}.access-departments h2{font-size:31px;color:var(--blue);margin:0 0 55px}.access-departments p{font-size:17px;margin:37px 0}.access-departments .help{font-size:16px;font-weight:400;margin-top:50px}
