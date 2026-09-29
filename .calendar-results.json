@@ -1,0 +1,20 @@
+﻿{
+    "layouts":  [
+                    {
+                        "width":  320,
+                        "months":  30,
+                        "errors":  [
+
+                                   ]
+                    },
+                    {
+                        "width":  1440,
+                        "months":  30,
+                        "errors":  [
+
+                                   ]
+                    }
+                ],
+    "reducedMotion":  "passed",
+    "pointerAndKeyboard":  "passed"
+}

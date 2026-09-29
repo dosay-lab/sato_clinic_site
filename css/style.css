@@ -245,9 +245,32 @@ a:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid #0877
 .calendar-head{height:116px;background:var(--gray);position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column}
 .calendar-month{font-size:50px;font-weight:700;line-height:1}
 .calendar-year{font-size:16px;font-weight:700;margin-top:9px}
-.calendar-next{position:absolute;right:20px;top:11px;font-size:69px;font-family:Arial,sans-serif;font-weight:300;line-height:1}
-.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:clamp(40px,8vw,73px);align-items:center;text-align:center;font-size:20px;font-weight:700;padding-top:12px}
+.calendar-period{text-align:center}
+.calendar-next{position:absolute;right:20px;top:11px;min-width:44px;min-height:44px;padding:0 4px;border:0;border-radius:8px;background:transparent;color:inherit;cursor:pointer;font-size:69px;font-family:Arial,sans-serif;font-weight:300;line-height:1}
+.calendar-next:hover{background:rgb(255 255 255 / 35%)}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:clamp(48px,8vw,73px);align-items:center;text-align:center;font-size:20px;font-weight:700;padding-top:12px}
 .calendar-grid .dow{font-size:20px}.calendar-grid .sun{color:#f00}.calendar-grid .sat{color:#0000ff}
+.calendar-day{
+  justify-self:center;width:calc(100% - 4px);max-width:56px;height:clamp(44px,6vw,56px);
+  border:0;border-radius:12px;padding:0;background:transparent;color:inherit;font:inherit;
+  cursor:pointer;touch-action:manipulation;
+  transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease;
+}
+@media (hover:hover){
+  .calendar-day:hover{background:#e2f7ff;transform:translateY(-3px);box-shadow:0 4px 10px rgb(18 184 243 / 20%)}
+}
+.calendar-day:focus-visible{background:#e2f7ff;transform:translateY(-3px)}
+.calendar-grid .calendar-day[aria-pressed="true"]{background:#08779f;color:#fff;box-shadow:0 3px 8px rgb(8 119 159 / 25%)}
+.calendar-day:active{transform:scale(.92)}
+.calendar-day.is-clicked{animation:calendar-day-pop .3s ease-out}
+@keyframes calendar-day-pop{
+  0%{transform:scale(.9)}
+  60%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+@media (prefers-reduced-motion:reduce){
+  .calendar-day,.calendar-day:hover,.calendar-day:focus-visible,.calendar-day:active,.calendar-day.is-clicked{transform:none;transition:none;animation:none}
+}
 
 .access-main{padding-top:70px}
 .access-wrap{width:min(100%,1120px);margin:0 auto}
