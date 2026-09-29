@@ -359,3 +359,18 @@ a:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid #0877
 }
 .site-header.is-collapsed .site-nav a{flex-shrink:0;justify-content:flex-start;padding:10px 12px;min-height:44px}
 .site-nav[hidden],.site-header.is-collapsed .site-nav[hidden]{display:none}
+
+/* Added by JavaScript only; content stays visible when scripting is unavailable. */
+.scroll-reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .7s ease-out,transform .7s cubic-bezier(.22,1,.36,1);
+}
+.scroll-reveal.is-visible{opacity:1;transform:none}
+.scroll-reveal:focus-within{opacity:1;transform:none;transition:none}
+@media (prefers-reduced-motion:reduce){
+  .scroll-reveal{opacity:1;transform:none;transition:none}
+}
+@media print{
+  .scroll-reveal{opacity:1;transform:none;transition:none}
+}
