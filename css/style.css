@@ -46,6 +46,10 @@ img {
   height: auto
 }
 
+picture {
+  display: contents
+}
+
 main {
   flex: 1;
   min-width: 0
@@ -1463,6 +1467,7 @@ body.has-booking-dialog {
 }
 
 @media (prefers-reduced-motion:reduce) {
+
   .booking-dialog-close,
   .booking-time-button.is-available {
     transition: none;

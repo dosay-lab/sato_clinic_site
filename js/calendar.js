@@ -8,7 +8,7 @@
   const prev = calendar.querySelector('.calendar-prev');
   const next = calendar.querySelector('.calendar-next');
   const todayButton = calendar.querySelector('.calendar-today');
-  const choices = document.querySelectorAll('.reserve-choice input[type="checkbox"]');
+  const choices = document.querySelectorAll('.reserve-choice input[type="radio"]');
   const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
   const [initialYear, initialMonth] = calendar.dataset.month.split('-').map(Number);
   const today = new Date();
@@ -72,7 +72,7 @@
   }
 
   function getVisitType() {
-    return document.querySelector('[name="first-visit"]')?.checked ? 'first' : 'return';
+    return document.querySelector('[value="first"]')?.checked ? 'first' : 'return';
   }
 
   function formatSelectedDate(dateString) {
@@ -230,11 +230,6 @@
 
   choices.forEach(choice => {
     choice.addEventListener('change', () => {
-      if (choice.checked) {
-        choices.forEach(otherChoice => {
-          if (otherChoice !== choice) otherChoice.checked = false;
-        });
-      }
       syncCalendarAvailability();
     });
   });
