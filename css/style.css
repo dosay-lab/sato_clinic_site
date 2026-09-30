@@ -328,12 +328,36 @@ button:focus-visible {
 
 .home-news-list li {
   min-height: 64px;
-  padding: 16px 0;
+  padding: 0;
   border-bottom: 1px solid #111;
   display: flex;
   align-items: center;
   font-size: 15px;
   font-weight: 700
+}
+
+.home-news-list a {
+  width: 100%;
+  min-height: 64px;
+  padding: 16px 0;
+  display: flex;
+  align-items: center
+}
+
+.home-news-list a {
+  transition: opacity .2s ease
+}
+
+@media (hover:hover) {
+  .home-news-list a:hover {
+    opacity: .65
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .home-news-list a {
+    transition: none
+  }
 }
 
 .home-news__button {
