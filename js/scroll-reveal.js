@@ -2,13 +2,10 @@
   document.querySelectorAll('img[src*="./assets/"]').forEach(image => {
     const src = image.getAttribute('src');
     if (!src || src.includes('/Logo/')) return;
-    if (image.closest('picture')) return;
-    const picture = document.createElement('picture');
-    const source = document.createElement('source');
-    source.srcset = src.replace(/\.(jpe?g|png)$/i, '.webp');
-    source.type = 'image/webp';
-    image.parentNode.insertBefore(picture, image);
-    picture.append(source, image);
+    const webpSrc = src.replace(/\.(jpe?g|png)$/i, '.webp');
+    const webp = new Image();
+    webp.onload = () => image.src = webpSrc;
+    webp.src = webpSrc;
     image.decoding = 'async';
     if (image.closest('.home-hero')) {
       image.fetchPriority = 'high';

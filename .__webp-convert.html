@@ -1,0 +1,16 @@
+<!doctype html>
+<meta charset="utf-8">
+<img id="source">
+<pre id="result"></pre>
+<script>
+  const source = document.querySelector('#source');
+  const result = document.querySelector('#result');
+  source.onload = () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = source.naturalWidth;
+    canvas.height = source.naturalHeight;
+    canvas.getContext('2d').drawImage(source, 0, 0);
+    result.textContent = canvas.toDataURL('image/webp', 0.86);
+  };
+  source.src = new URLSearchParams(location.search).get('src');
+</script>

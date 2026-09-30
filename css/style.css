@@ -46,10 +46,6 @@ img {
   height: auto
 }
 
-picture {
-  display: contents
-}
-
 main {
   flex: 1;
   min-width: 0
