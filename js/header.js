@@ -26,7 +26,7 @@
     header.classList.remove('is-collapsed');
     nav.hidden = false;
     const rows = new Set([...nav.children].map(link => Math.round(link.offsetTop)));
-    collapsed = rows.size >= 3;
+    collapsed = inner.clientWidth <= 1200 || rows.size > 1;
     header.classList.toggle('is-collapsed', collapsed);
     setOpen(wasCollapsed && open);
     if (collapsed && nav.hidden && nav.contains(active)) toggle.focus();

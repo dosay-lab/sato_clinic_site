@@ -7,6 +7,7 @@
   <meta name="robots" content="noindex, nofollow">
   <title>佐藤医院 | Sato Clinic</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/polish.css">
   <script src="./js/header.js" defer></script>
   <script src="./js/scroll-reveal.js" defer></script>
 </head>
@@ -33,11 +34,27 @@
   <main>
     <section class="home-hero" aria-label="地域に根ざした医療">
       <img src="./assets/Hospital_Exterior/hospital_1.jpg" alt="佐藤医院の外観" fetchpriority="high" decoding="async">
-      <h1>地域に根ざした医療</h1>
+      <div class="home-hero__content">
+        <p class="home-hero__eyebrow">SATO CLINIC <span>｜</span> 地域とともに</p>
+        <h1>地域に根ざした<br>医療</h1>
+        <p class="home-hero__lead">体のこと、気になること。<br>いつでも相談できる、地域のかかりつけ医として。</p>
+        <div class="home-hero__actions">
+          <a class="hero-primary" href="./reservation.html">診療予約 <span aria-hidden="true">↗</span></a>
+          <a class="hero-secondary" href="./medical.html">診療内容を見る <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="home-hero__location">JR上野駅より徒歩5分 <span>／</span> 駐車場あり</p>
+      </div>
     </section>
 
     <section class="home-hours-block">
-      <div class="hours">
+      <div class="home-hours-inner">
+        <div class="home-hours-intro">
+          <span class="eyebrow">INFORMATION</span>
+          <h2>診療時間の<br>ご案内</h2>
+          <p>ご来院の前に、診療日と受付時間をご確認ください。</p>
+          <a href="./access.html">アクセスを見る <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hours">
         <table class="hours-table" aria-label="診療時間">
           <thead>
             <tr>
@@ -76,6 +93,7 @@
         </table>
         <p class="hours-note">
           受付時間：午前　8:00〜11:00　／　午後　12:00〜17:00<br>休診日：木曜・土曜午後・日曜<br>※祝祭日も診療を行っておりますが、休診日もございますので、事前にご確認ください。</p>
+        </div>
       </div>
     </section>
 
@@ -89,6 +107,7 @@
       <div class="home-news__inner">
         <img src="./assets/crops/home-notice.jpg" alt="受付で案内を受ける患者" loading="lazy" decoding="async">
         <div class="home-news-copy">
+          <span class="eyebrow">NEWS &amp; UPDATES</span>
           <h2>お知らせ</h2>
           <ul class="home-news-list">
             <li><a href="./news.html">インフルエンザ予防接種について</a></li>
@@ -106,6 +125,7 @@
       <div class="home-director__inner">
         <img src="./assets/crops/home-director.jpg" alt="院長 佐藤太郎" loading="lazy" decoding="async">
         <div class="home-director-copy">
+          <span class="eyebrow">MESSAGE</span>
           <h2>院長挨拶</h2>
           <p>こんにちは。<br>佐藤医院の院長、佐藤太郎と申します。当院のホームページをご覧いただき、ありがとうございます。</p>
           <p>
@@ -122,6 +142,7 @@
 
     <section class="home-medical" id="medical">
       <div class="home-medical__inner">
+        <span class="eyebrow section-eyebrow">MEDICAL CARE</span>
         <h2 class="section-title">診療内容</h2>
         <article class="home-medical-row">
           <img src="./assets/crops/medical-1.jpg" alt="一般内科診療" loading="lazy" decoding="async">
@@ -159,6 +180,7 @@
       <div class="home-about__inner">
         <img src="./assets/crops/home-about.jpg" alt="患者様と話す医師" loading="lazy" decoding="async">
         <div class="home-about-copy">
+          <span class="eyebrow">ABOUT US</span>
           <h2>当院について</h2>
           <p>
             佐藤医院は、地域の皆様の健康を守り、より良い生活をサポートすることを使命としています。創立以来、私たちは「患者様一人ひとりに寄り添った診療」を大切にし、地域密着型の医療を提供してまいりました。今後も、皆様の健康維持と病気予防に貢献するため、より良い医療サービスを提供し続けることをお約束いたします。
@@ -170,6 +192,7 @@
 
     <section class="home-staff" id="staff">
       <div class="home-staff__inner">
+        <span class="eyebrow section-eyebrow">OUR TEAM</span>
         <h2 class="section-title">スタッフ紹介</h2>
         <p class="staff-lead">
           地域の皆様に安心してご来院いただけるよう、スタッフ一同、誠心誠意対応いたします。それぞれの専門性と温かさを活かし、皆様の健康を支えるパートナーとしてお力になれるよう努めてまいります。</p>
@@ -222,6 +245,7 @@
 
     <section class="home-access">
       <div class="home-access__inner">
+        <span class="eyebrow section-eyebrow">ACCESS</span>
         <h2 class="section-title">アクセス</h2>
         <div class="home-access-top">
           <img src="./assets/map.jpg" alt="佐藤医院周辺地図" loading="lazy" decoding="async">

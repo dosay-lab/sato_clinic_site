@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
-
 :root {
   --blue: #12b8f3;
   --gray: #c3c1c1;
@@ -1865,7 +1863,7 @@ body.has-booking-dialog {
   }
 }
 
-/* Collapse only when the actual navigation would wrap onto a third row. */
+/* Collapsed navigation styles; header.js switches based on available width. */
 .menu-toggle {
   display: none;
   flex: 0 0 44px;
