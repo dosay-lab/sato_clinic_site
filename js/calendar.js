@@ -85,7 +85,7 @@
     const [dateYear, dateMonth, dateDay] = dateString.split('-').map(Number);
     const weekday = new Date(dateYear, dateMonth - 1, dateDay).getDay();
     if (weekday === 0 || weekday === 4) return true;
-    if (minutes >= 11 * 60 + 15 && minutes <= 11 * 60 + 45) return true;
+    if (minutes >= 11 * 60 + 15 && minutes < 13 * 60) return true;
     if (weekday === 6 && minutes >= 11 * 60 + 15 && minutes <= 17 * 60) return true;
     return false;
   }
